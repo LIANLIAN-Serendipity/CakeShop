@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="#FFD1DC"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 商家信息区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/shop"
+            android:layout_marginEnd="12dp"
+            android:contentDescription="商家图标" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="糖屿蛋糕"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- 分隔线 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#EEEEEE" />
+
+    <!-- 订单基本信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/order_list_item_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单ID：OD2025060511300001"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+
+        <TextView
+            android:id="@+id/order_list_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下单时间：2025-06-05 11:30:00"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <!-- 订单状态和操作按钮放在同一行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/order_list_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单状态：待发货"
+                android:textSize="14sp"
+                android:textColor="#FF5722"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_order_detail"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/orderdetail"
+                android:contentDescription="订单详情" />
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_order_del"-->
+<!--                android:layout_width="36dp"-->
+<!--                android:layout_height="36dp"-->
+<!--                android:layout_marginEnd="4dp"-->
+<!--                android:background="@drawable/delete"-->
+<!--                android:contentDescription="删除订单" />-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:orientation="vertical"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_marginBottom="20dp"-->
+<!--android:layout_margin="8dp"-->
+<!--android:background="@drawable/background"-->
+<!--android:padding="12dp"-->
+<!--android:layout_height="wrap_content">-->
+
+<!--&lt;!&ndash; 商家信息区域 &ndash;&gt;-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:gravity="center_vertical"-->
+<!--    android:orientation="horizontal">-->
+
+<!--    <ImageView-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:src="@drawable/shop"-->
+<!--        android:layout_marginEnd="8dp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="糖屿蛋糕"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:fontFamily="sans-serif-medium"/>-->
+
+<!--</LinearLayout>-->
+
+<!--&lt;!&ndash; 订单ID &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_id"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="订单ID：OD2025060511300001"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#666666"-->
+<!--    android:layout_marginTop="8dp"/>-->
+
+<!--&lt;!&ndash; 用户信息 &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_user"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="用户：张三 (13800138000)"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#666666"-->
+<!--    android:layout_marginTop="4dp"/>-->
+
+<!--&lt;!&ndash; 下单时间 &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_time"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="下单时间：2025-06-05 11:30:00"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#666666"-->
+<!--    android:layout_marginTop="8dp"/>-->
+
+<!--&lt;!&ndash; 订单状态 &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_status"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="订单状态：待发货"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#FF5722"-->
+<!--    android:layout_marginTop="4dp"/>-->
+
+<!--&lt;!&ndash; 总金额 &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_totalPrice"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="总金额：￥299.00"-->
+<!--    android:textSize="16sp"-->
+<!--    android:textColor="#FF5722"-->
+<!--    android:layout_marginTop="8dp"/>-->
+
+<!--&lt;!&ndash; 订单详情 &ndash;&gt;-->
+<!--<TextView-->
+<!--    android:id="@+id/order_list_item_detail"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="订单详情：巧克力蛋糕 x1，草莓蛋糕 x2"-->
+<!--    android:textSize="14sp"-->
+<!--    android:textColor="#666666"-->
+<!--    android:layout_marginTop="4dp"/>-->
+
+<!--&lt;!&ndash; 操作按钮区域 &ndash;&gt;-->
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:layout_marginTop="12dp">-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_order_update"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginEnd="8dp"-->
+<!--        android:background="@color/pink1"-->
+<!--        android:text="修改"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="14sp"/>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_order_detail"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:background="@color/pink1"-->
+<!--        android:text="订单详情"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="14sp"/>-->
+
+<!--    &lt;!&ndash;        <Button&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:id="@+id/btn_order_del"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_width="0dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_height="36dp"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:layout_weight="1"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:background="@color/pink1"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:text="删除"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textColor="@android:color/white"&ndash;&gt;-->
+<!--    &lt;!&ndash;            android:textSize="14sp"/>&ndash;&gt;-->
+
+<!--</LinearLayout>-->
+
+<!--</LinearLayout>-->
+

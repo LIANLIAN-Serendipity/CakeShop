@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    android:background="#FFD1DC"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_order_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="订单ID: 12345"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_order_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="用户: 张三"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_order_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下单日期: 2025-06-01"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/item_order_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="订单金额: ￥299.00"
+            android:textColor="#ff5000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/item_order_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="订单状态: 已完成"
+            android:textColor="#4CAF50"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- 调整按钮位置，确保删除按钮在右侧，更新按钮在左侧 -->
+    <Button
+        android:id="@+id/btn_order_update"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/update" />
+
+    <Button
+        android:id="@+id/btn_order_del"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/delete" />
+</RelativeLayout>

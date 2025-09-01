@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Zhouxuelian1"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".activity.UpdateOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UpdateUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ManageUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ManagOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UpdateCakeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.AddCakeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.GActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".demo.HActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.EActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RepasswordActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".Service.MusicService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity.PlayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.FActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.UserOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CakeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".demo.cakeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

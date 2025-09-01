@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/background"
+    tools:context=".activity.UpdateCakeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="@color/pink1"
+        app:navigationIcon="@drawable/back"
+        app:title="修改蛋糕信息"
+        app:titleTextColor="#ffffff" />
+
+    <ImageView
+        android:id="@+id/update_cake_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/emptyimage"/>
+
+    <EditText
+        android:id="@+id/update_cake_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit_bg"
+        android:hint="请输入蛋糕名称"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/update_cake_introduce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:gravity="top"
+        android:background="@drawable/shape_edit_bg"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="请输入蛋糕介绍"/>
+
+    <EditText
+        android:id="@+id/update_cake_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit_bg"
+        android:hint="请输入蛋糕价格"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/update_cake_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_edit_bg"
+        android:hint="请选择蛋糕类别"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/update_cake_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/pink1"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:text="修  改"/>
+
+
+
+
+</LinearLayout>

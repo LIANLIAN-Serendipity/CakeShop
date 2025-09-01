@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".fragment.CartFragment">
+
+    <ImageView
+        android:id="@+id/cart_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:visibility="gone"
+        android:src="@drawable/cart1"/>
+
+    <TextView
+        android:id="@+id/cart_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cart_img"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:text="购物车是空的"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@id/cart_tip"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/cart_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:text="总价："
+        android:textColor="#ff0000"
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/cart_settlement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="结算"/>
+</RelativeLayout>

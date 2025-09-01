@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:background="@drawable/background"
+    tools:context=".activity.PlayActivity">
+
+    <!-- 返回按钮 -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/pink1"
+        app:navigationIcon="@drawable/back"
+        app:title="音乐播放器"
+        app:titleTextColor="#ffffff" />
+
+    <!-- 原有的转盘图片 -->
+    <ImageView
+        android:id="@+id/player_pan"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/pan"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+    <!-- 其余布局保持不变 -->
+    <SeekBar
+        android:id="@+id/player_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:id="@+id/player_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:0"/>
+
+        <TextView
+            android:id="@+id/player_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="0:0"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/player_pause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/zanting1"/>
+    </LinearLayout>
+</LinearLayout>

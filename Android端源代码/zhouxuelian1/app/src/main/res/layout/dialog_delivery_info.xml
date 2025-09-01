@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/et_delivery_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入收货人姓名"/>
+
+    <EditText
+        android:id="@+id/et_delivery_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入联系电话"/>
+
+    <EditText
+        android:id="@id/et_delivery_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入收货地址"/>
+
+    <EditText
+        android:id="@+id/et_delivery_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="备注信息（选填）"/>
+</LinearLayout>

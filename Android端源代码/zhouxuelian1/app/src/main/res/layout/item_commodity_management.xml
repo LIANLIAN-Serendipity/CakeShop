@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/item_commodity_img"
+        android:padding="5dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/round_border"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@id/item_commodity_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/item_commodity_name"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="苹果Apple"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:text="上架时间："
+                android:textColor="#999999"
+                android:textSize="20sp" />
+            <TextView
+                android:id="@+id/item_timedetail"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/item_time"
+                android:text="2025-06-01"
+                android:textColor="#999999"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textSize="24sp"
+                android:textColor="#ff5000"/>
+
+            <TextView
+                android:id="@+id/item_commodity_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bottom_btn_selected"
+                android:textSize="30sp"
+                android:text="11111"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_commodity_del"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/delete"
+        />
+    <Button
+        android:id="@+id/btn_commodity_update"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btn_commodity_del"
+        android:background="@drawable/update"/>
+</RelativeLayout>

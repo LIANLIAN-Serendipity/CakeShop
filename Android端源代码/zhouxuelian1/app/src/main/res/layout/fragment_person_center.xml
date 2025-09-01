@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".fragment.PersonCenterFragment">
+
+    <TextView
+        android:id="@+id/person_center_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="用户名"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="30dp"
+        android:textSize="30dp"/>
+    <ImageView
+        android:id="@+id/personcenter_userImg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/emptyimage" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FCF0D0"/>
+
+    <!-- 第一个菜单项 - 根据角色显示不同内容 -->
+    <TextView
+        android:id="@+id/personcenter1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/mima"
+        android:drawableRight="@drawable/right"
+        android:text="修改密码"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FCF0D0"/>
+
+    <!-- 第二个菜单项 - 根据角色显示不同内容 -->
+    <TextView
+        android:id="@+id/personcenter2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/order3"
+        android:drawableRight="@drawable/right"
+        android:text="我的订单"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FCF0D0"/>
+
+    <!-- 第三个菜单项 - 根据角色显示不同内容 -->
+    <TextView
+        android:id="@+id/personcenter3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:drawablePadding="10dp"
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/yinyue"
+        android:drawableRight="@drawable/right"
+        android:text="小工具-音乐播放器"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FCF0D0"/>
+
+    <TextView
+        android:id="@+id/person_center_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/tuichu"
+        android:drawableRight="@drawable/right"
+        android:drawablePadding="10dp"
+        android:padding="15dp"
+        android:textSize="20sp"
+        android:text="退出登录"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FCF0D0"/>
+
+</LinearLayout>

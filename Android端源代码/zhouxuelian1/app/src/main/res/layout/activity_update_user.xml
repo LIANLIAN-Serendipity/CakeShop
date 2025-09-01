@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/background"
+    tools:context=".activity.UpdateUserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/pink1"
+        app:navigationIcon="@drawable/back"
+        app:title="修改用户信息"
+        app:titleTextColor="#ffffff" />
+
+    <!-- 优化后的头像 - 减小尺寸 -->
+    <ImageView
+        android:id="@+id/update_user_avatar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/emptyimage"
+        android:contentDescription="用户头像"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="centerCrop" />
+
+    <!-- 账户字段 - 标题与输入框同行，仅输入框下方有横线 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="账户:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <EditText
+                android:id="@+id/update_user_account"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入账户"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- 仅输入框下方的横线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 手机号码字段 - 减小高度和间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="手机号码:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <EditText
+                android:id="@+id/update_user_phone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 密码字段 - 减小高度和间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="密码:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <EditText
+                android:id="@+id/update_user_password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 性别字段 - 减小高度和间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="性别:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:id="@+id/update_user_gender"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请选择性别"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 角色字段 - 减小高度和间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="角色:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <TextView
+                android:id="@+id/update_user_role"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请选择角色"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:clickable="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 地址字段 - 修改为EditText并减小高度和间距 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:text="地址:"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:gravity="center_vertical|right"
+                android:paddingRight="5dp" />
+
+            <EditText
+                android:id="@+id/update_user_address"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入地址"
+                android:textSize="16sp"
+                android:padding="0dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="90dp"
+            android:background="#333333" />
+    </LinearLayout>
+
+    <!-- 修改按钮 - 减小内边距 -->
+    <Button
+        android:id="@+id/update_user_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/pink1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="修  改"
+        android:padding="10dp"
+        android:elevation="2dp" />
+
+</LinearLayout>

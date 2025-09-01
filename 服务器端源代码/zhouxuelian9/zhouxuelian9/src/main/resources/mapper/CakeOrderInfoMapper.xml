@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.smxy.zhouxuelian9.mapper.CakeOrderInfoMapper">
+    <select id="selectByUserId" parameterType="String" resultType="cn.smxy.zhouxuelian9.entity.CakeOrderInfo">
+        select * from cakeorderinfo where cakeuserId=#{cakeuserId}
+    </select>
+
+    <insert id="insert" parameterType="cn.smxy.zhouxuelian9.entity.CakeOrderInfo">
+        insert into cakeorderinfo(cakeorderId, cakeuserId, cakeorderTime, caketotalPrice, cakeorderStatus)
+        values (#{cakeorderId}, #{cakeuserId}, #{cakeorderTime}, #{caketotalPrice}, #{cakeorderStatus})
+    </insert>
+
+    <select id="selectAllOrders" resultType="cn.smxy.zhouxuelian9.entity.CakeOrderInfo">
+        select * from cakeorderinfo
+    </select>
+
+    <update id="updateOrder" parameterType="cn.smxy.zhouxuelian9.entity.CakeOrderInfo">
+        update cakeorderinfo
+        set cakeuserId = #{cakeuserId},
+            cakeorderTime = #{cakeorderTime},
+            caketotalPrice = #{caketotalPrice},
+            cakeorderStatus = #{cakeorderStatus},
+            deliveryAddress = #{deliveryAddress},
+            customerName = #{customerName},
+            customerPhone = #{customerPhone}
+        where cakeorderId = #{cakeorderId}
+    </update>
+
+    <delete id="deleteOrder" parameterType="String">
+        delete from cakeorderinfo where cakeorderId = #{orderId}
+    </delete>
+
+    <!-- 根据 cakeorderId 查询订单信息、详情信息和蛋糕信息 -->
+    <select id="selectOrderById" parameterType="String" resultMap="OrderInfoResultMap">
+        SELECT
+            oi.cakeorderId,
+            oi.cakeuserId,
+            oi.cakeorderTime,
+            oi.caketotalPrice,
+            oi.cakeorderStatus,
+            oi.deliveryAddress,
+            oi.customerName,
+            oi.customerPhone,
+            od.cakedetailId,
+            od.cakeId,
+            od.num,
+            od.subtotal,
+            od.remark,
+            c.cakeName,
+            c.introduce,
+            c.price,
+            c.cakePicture
+        FROM
+            cakeorderinfo oi
+                LEFT JOIN
+            cakeorderdetail od ON oi.cakeorderId = od.cakeorderId
+                LEFT JOIN
+            cake c ON od.cakeId = c.cakeId
+        WHERE
+            oi.cakeorderId = #{cakeorderId}
+    </select>
+
+    <!-- 结果映射 -->
+    <resultMap id="OrderInfoResultMap" type="cn.smxy.zhouxuelian9.entity.CakeOrderInfo">
+        <id property="cakeorderId" column="cakeorderId"/>
+        <result property="cakeuserId" column="cakeuserId"/>
+        <result property="cakeorderTime" column="cakeorderTime"/>
+        <result property="caketotalPrice" column="caketotalPrice"/>
+        <result property="cakeorderStatus" column="cakeorderStatus"/>
+        <result property="deliveryAddress" column="deliveryAddress"/>
+        <result property="customerName" column="customerName"/>
+        <result property="customerPhone" column="customerPhone"/>
+        <collection property="orderDetails" ofType="cn.smxy.zhouxuelian9.entity.CakeOrderDetail">
+            <id property="cakedetailId" column="cakedetailId"/>
+            <result property="cakeId" column="cakeId"/>
+            <result property="num" column="num"/>
+            <result property="subtotal" column="subtotal"/>
+            <result property="remark" column="remark"/>
+            <association property="cake" javaType="cn.smxy.zhouxuelian9.entity.Cake">
+                <id property="cakeId" column="cakeId"/>
+                <result property="cakeName" column="cakeName"/>
+                <result property="introduce" column="introduce"/>
+                <result property="price" column="price"/>
+                <result property="cakePicture" column="cakePicture"/>
+            </association>
+        </collection>
+    </resultMap>
+</mapper>

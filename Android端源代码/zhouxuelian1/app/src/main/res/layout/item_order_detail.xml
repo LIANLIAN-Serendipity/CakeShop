@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="12dp">
+
+    <!-- 商品信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 商品图片 -->
+        <ImageView
+            android:id="@+id/iv_cake_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/emptyimage"
+            android:contentDescription="蛋糕图片"
+            android:scaleType="centerCrop"
+            android:background="#F0F0F0"/>
+
+        <!-- 商品基本信息 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_cake_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="豪华水果蛋糕"
+                android:textSize="16sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium"/>
+
+            <TextView
+                android:id="@+id/tv_cake_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蛋糕ID: PID123"
+                android:textSize="12sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_cake_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单价: ￥199.00"
+                android:textSize="14sp"
+                android:textColor="#FF5722"
+                android:layout_marginTop="4dp"/>
+
+            <!-- 新增：小计金额控件 -->
+<!--            <TextView-->
+<!--                android:id="@+id/tv_subtotal"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="小计: ￥199.00"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="#FF5722"-->
+<!--                android:layout_marginTop="4dp"/>-->
+        </LinearLayout>
+
+        <!-- 商品数量 -->
+        <TextView
+            android:id="@+id/tv_cake_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x 1"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp"/>
+    </LinearLayout>
+
+    <!-- 商品介绍 -->
+    <TextView
+        android:id="@+id/tv_cake_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8英寸，草莓、蓝莓、芒果等新鲜水果搭配奶油"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:padding="12dp"
+        android:layout_marginTop="4dp"/>
+
+    <!-- 商品备注 -->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_remark"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="备注：请下午3点后送达"-->
+<!--        android:textSize="14sp"-->
+<!--        android:textColor="#FF5722"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="#FFF0F0"-->
+<!--        android:layout_marginTop="4dp"/>-->
+</LinearLayout>

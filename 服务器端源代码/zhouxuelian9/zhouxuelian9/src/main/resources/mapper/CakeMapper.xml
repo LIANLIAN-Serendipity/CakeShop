@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.smxy.zhouxuelian9.mapper.CakeMapper">
+    <select id="selectAll" resultType="Cake">
+        select * from Cake
+    </select>
+    <select id="findByType" resultType="cn.smxy.zhouxuelian9.entity.Cake">
+        SELECT * FROM cake WHERE caketypeId = #{caketypeId}
+    </select>
+
+    <select id="insert" parameterType="Cake">
+        insert into cake(cakeName,introduce,price,cakePicture,caketypeId) values (#{cakeName},#{introduce},#{price},#{cakePicture},#{caketypeId})
+    </select>
+    <delete id="delById" parameterType="Integer">
+        delete from Cake where cakeId=#{cakeId}
+    </delete>
+    <select id="findById" parameterType="Integer" resultType="Cake">
+        select * from Cake where cakeId=#{cakeId}
+    </select>
+    <update id="update" parameterType="Cake">
+        update Cake
+        set cakeName=#{cakeName}, introduce=#{introduce}, price=#{price}, cakePicture=#{cakePicture},caketypeId=#{caketypeId}
+        where cakeId=#{cakeId}
+    </update>
+</mapper>
