@@ -132,7 +132,7 @@ spring.datasource.password=your_password
 
 ## 👨‍💻 作者
 
-**周雪莲** - 项目开发者
+**lianlian** - 项目开发者
 
 ## 🙏 致谢
 
@@ -142,3 +142,4 @@ spring.datasource.password=your_password
 
 
 ⭐ 如果这个项目对您有帮助，请给我们一个Star！ 
+
