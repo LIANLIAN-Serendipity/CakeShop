@@ -54,7 +54,7 @@
 
 #### 1. 克隆项目
 ```bash
-git clone https://github.com/your-username/CakeShop-Android.git
+git clone https://github.com/LIANLIAN-Serendipity/CakeShop.git
 cd CakeShop-Android
 ```
 
@@ -139,5 +139,6 @@ spring.datasource.password=your_password
 感谢所有为这个项目做出贡献的开发者和用户！
 
 ---
+
 
 ⭐ 如果这个项目对您有帮助，请给我们一个Star！ 
